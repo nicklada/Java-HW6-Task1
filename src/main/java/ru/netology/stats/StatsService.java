@@ -10,14 +10,8 @@ public class StatsService {
     }
 
     public int calculateAverage(int[] sales) {
-        int average = 0;
-        if (sales.length > 0) {
-            int sum = 0;
-            for (int i : sales) {
-                sum += i;
-            }
-            average = sum / sales.length;
-        }
+      int sum = calculateSum(sales);
+        int average = sum / sales.length;
         return average;
     }
 
